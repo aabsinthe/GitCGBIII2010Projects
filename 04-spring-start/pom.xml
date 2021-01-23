@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--我们自己创建springboot项目都默认继承springboot工程提供的一个父工程，
+    这个父工程中提供了一些基础依赖管理-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!--当前项目的坐标和描述-->
+    <groupId>com.cy</groupId>
+    <artifactId>04-spring-start</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>04-spring-start</name>
+    <description>Demo project for Spring Boot</description>
+
+    <!--当前项目中的属性配置-->
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <!--当前项目需要的依赖-->
+    <dependencies>
+        <!--springboot 工程的启动依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--springboot 工程中的测试依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!--这个插件提供了项目的maven操作，例如clean-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
